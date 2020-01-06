@@ -4,8 +4,9 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="planningDao" class="planner.PlanningDao" />
-    <bean id="planningService" class="planner.PlanningService" >
-        <constructor-arg ref="planningDao" />
+    <bean name="nullPlanningDao" class="planner.dataAccess.NullPlanningDao" />
+    <bean name="planningService" class="planner.PlanningService" >
+        <constructor-arg ref="nullPlanningDao" />
     </bean>
+    <bean name="dbPlanningDao" class="planner.dataAccess.DbPlanningDao" />
 </beans>

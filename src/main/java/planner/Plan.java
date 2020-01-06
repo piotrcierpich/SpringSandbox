@@ -9,7 +9,7 @@ public class Plan {
 
     public Plan(String name) {
         this.name = name;
-        members = new ArrayList<Member>();
+        members = new ArrayList<>();
     }
 
     public void addMember(Member member) {
