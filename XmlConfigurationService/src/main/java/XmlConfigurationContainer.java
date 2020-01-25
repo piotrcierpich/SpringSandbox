@@ -4,8 +4,10 @@ import planner.Member;
 import planner.Plan;
 import planner.PlanningService;
 
-public class Sandbox {
-    public static void main(String[] args) {
+
+public class XmlConfigurationContainer {
+
+    public static void setup() {
         ApplicationContext applicationContext = getClassPathXmlApplicationContext();
         PlanningService planningService = applicationContext.getBean(PlanningService.class);
         PlanningService planningService2 = (PlanningService)applicationContext.getBean("planningService");

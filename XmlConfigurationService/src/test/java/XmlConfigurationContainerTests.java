@@ -1,8 +1,4 @@
-import org.hamcrest.Matcher;
-import org.hamcrest.Matchers;
-import org.junit.Assert;
 import org.junit.Test;
-import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import planner.Member;
@@ -19,7 +15,7 @@ import static java.util.stream.Collectors.toList;
 import static org.hamcrest.Matchers.contains;
 import static org.junit.Assert.*;
 
-public class ContainerTests {
+public class XmlConfigurationContainerTests {
     @Test
     public void beanIsConfiguredFromXml() {
         ApplicationContext applicationContext = getClassPathXmlApplicationContext();
